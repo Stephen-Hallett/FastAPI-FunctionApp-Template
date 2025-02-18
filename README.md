@@ -36,14 +36,13 @@ git init
 git add .
 git commit -m "feat: Initial commit"
 git branch -M dev
-# Create your
 git remote add origin GITHUB_LINK
 git push -u origin dev
 ```
 > [!NOTE]
 > Pushing this to your github will make two workflows run and fail, this is fine! You still need to update some information before they will work.
 
-#### Adding your azure details to github actions
+#### Adding your Azure details to github actions
 In the root of the repository there is a template.secrets.json file. Rename this file to **secrets.json** This file needs to be populated, and the contents need to be added to your github secrets. Fill the clientId & clientSecret with your service principal values, and fill the remaining fields with the results of the following.
 > [!CAUTION]
 > Failure to rename the template.secrets.json file to secrets.json could result in you uploading your secret variables to github if you are not careful.
